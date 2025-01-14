@@ -1,0 +1,334 @@
+:root {
+    --primary-color: #e6007e;
+    --primary-hover: #b3005c;
+    --background-color: #fff;
+    --text-color: #333;
+    --font-family: "Bona Nova SC", serif;
+    --font-secondary: "Bacasime Antique", serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.full-page {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: start;
+    padding-top: 0;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInScale 2s ease-out forwards;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInScale 2s ease-out forwards 0.5s;
+}
+
+.header-title {
+    font-family: var(--font-family);
+    font-size: 4rem;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeInScale 2s ease-out forwards 1s;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    margin-top: -10px;
+    opacity: 0;
+    animation: fadeInScale 2s ease-out forwards 1.5s;
+}
+
+.section {
+    padding: 20px;
+}
+
+#projets {
+    background-color: white;
+}
+
+#projets h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.projets-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.projet {
+    width: 250px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projet:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.projet-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.titre {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px;
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    width: 50%;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+#a-propos {
+    background-color: var(--primary-color);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.a-propos-text {
+    width: 80%;
+    font-size: 1rem;
+    font-family: var(--font-family) !important;
+    color: white !important;
+    text-align: center;
+    padding-right: 20px;
+}
+
+#a-propos .a-propos-content {
+    font-family: 'Bacasime Antique', serif;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#a-propos h2, #a-propos p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.profile-picture {
+    width: 50vw;
+    height: 50vw;
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeInScale 2s ease-out forwards 0.5s;
+}
+
+.contact {
+    padding: 40px 20px;
+    background-color: white;
+    color: var(--primary-color);
+}
+
+#contact h2 {
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.contact-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--primary-color);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 70px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Bacasime Antique', serif;
+}
+
+.nav-link:hover {
+    background-color: #b3005c;
+    transform: scale(1.1);
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    header {
+        background-color: var(--primary-color);
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .projets-container {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projet {
+        width: 80%;
+    }
+
+    .projet-img {
+        height: 150px;
+    }
+
+    .titre {
+        font-size: 1.2rem;
+    }
+
+    #projets h2 {
+        font-size: 2rem;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
