@@ -1,0 +1,364 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.slide-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+header, section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    flex-direction: column;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+section {
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    width: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f4f4f4;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+.voir-plus, .btn-cv {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #6e8efb;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    width: 50%;
+}
+
+.voir-plus:hover, .btn-cv:hover {
+    background-color: #5a7fe6;
+    transform: translateY(-3px);
+}
+
+.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode footer p {
+    color: #333;
+}
+.dark-mode section {
+    background-color: #333;
+    color: white;
+}
+
+.profile-picture {
+    width: 50vw;
+    height: 50vw;
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menu {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.menu a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+.voir-plus {
+display: inline-block;
+padding: 15px 25px;
+background-color: #6e8efb;
+color: white;
+text-decoration: none;
+border-radius: 10px;
+font-weight: bold;
+margin-top: 20px;
+transition: background-color 0.3s, transform 0.2s;
+text-align: center;
+width: 50%;
+border: none;
+outline: none;
+text-decoration: none;
+}
+footer {
+   background: linear-gradient(135deg, #6e8efb, #a777e3);
+   color: white;
+   text-align: center;
+   padding: 15px;
+}
+section#contact form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   margin-top: 20px;
+   max-width: 600px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+section#contact form div {
+   display: flex;
+   flex-direction: column;
+}
+
+section#contact form label {
+   font-weight: bold;
+}
+
+section#contact form input,
+section#contact form textarea {
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 1em;
+   width: 100%;
+}
+
+section#contact form button {
+   background-color: #6e8efb;
+   color: white;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1.2em;
+   transition: background 0.3s;
+}
+
+section#contact form button:hover {
+   background-color: #5a7fe6;
+}
+
+.social-links {
+   margin-top: 20px;
+   display: flex;
+   gap: 15px;
+   justify-content: center;
+}
+
+.social-links a {
+   font-size: 30px;
+   color: #333;
+   transition: color 0.3s;
+}
+
+.social-links a:hover {
+   color: #6e8efb;
+}
+
+.menu {
+   position: fixed;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 15px;
+   background: linear-gradient(135deg, #6e8efb, #a777e3);
+   padding: 10px;
+   border-radius: 15px;
+   backdrop-filter: blur(10px);
+}
+
+.dark-mode .menu a {
+   color: #333;
+}
+.dark-mode {
+   background-color: #1a1a1a;
+   color: white;
+}
+.dark-mode section {
+   background-color: #333;
+   color: white;
+}
+.dark-mode .project-card{
+   background: #1a1a1a;
+}
+.dark-mode .press {
+   color: #333;
+}
+.profile-picture {
+   width: 50vw;
+   height: 50vw;
+   max-width: 400px;
+   max-height: 400px;
+   border-radius: 50%;
+   object-fit: cover;
+   opacity: 1;
+}
+.logo {
+   width: 50vw;
+   height: 50vw;
+   max-width: 100px;
+   max-height: 100px;
+   object-fit: cover;
+   opacity: 1;
+}
+.logo-html {
+   width: 50vw;
+   height: 50vw;
+   max-width: 110px;
+   max-height: 110px;
+   object-fit: cover;
+   opacity: 1;
+}
+.logo-contact {
+   width: 50vw;
+   height: 50vw;
+   max-width: 75px;
+   max-height: 75px;
+   object-fit: cover;
+   opacity: 1;
+}
+#a-propos {
+   background-color: white;
+   padding: 40px 20px;
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: space-between;
+   align-items: center;
+   color: white;
+}
+
+.a-propos-text {
+   width: 80%;
+   font-size: 1rem;
+   color: white !important;
+   text-align: center;
+   padding-right: 20px;
+}
+
+#a-propos .a-propos-content {
+   color: white;
+   text-align: center;
+   padding: 20px;
+}
+
+h2 {
+   color: #6e8efb;
+   font-size: 2rem;
+}
+.btn-cv {
+   display: inline-block;
+   padding: 15px 25px;
+   background-color: #6e8efb;
+   color: white;
+   text-decoration: none;
+   border-radius: 10px;
+   font-weight: bold;
+   margin-top: 20px;
+   transition: background-color 0.3s, transform 0.2s;
+   text-align: center;
+   width: 50%;
+}
+.voir-plus {
+   display: inline-block;
+   padding: 15px 25px;
+   background-color: #6e8efb;
+   color: white;
+   text-decoration: none;
+   border-radius: 10px;
+   font-weight: bold;
+   margin-top: 20px;
+   transition: background-color 0.3s, transform 0.2s;
+   text-align: center;
+   width: 50%;
+   border: none;
+   outline: none; 
+   text-decoration: none; 
+}
+

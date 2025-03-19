@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Death by IA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: white;
+      color: #fff;
+    }
+
+    h1, h2 {
+      color: #ffffff;
+    }
+
+    header {
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .back-arrow {
+      margin-right: auto; /* La pousse à gauche */
+    }
+
+    .back-arrow {
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .back-arrow:hover {
+      color: #00eaff;
+    }
+
+    header .logo h1 {
+      font-size: 2.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00eaff;
+    }
+
+    main {
+      padding: 20px;
+      margin-top: 80px; /* Pour éviter que le contenu ne soit caché sous l'en-tête fixe */
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #6e8efb;
+      margin-bottom: 20px;
+    }
+
+    .container p {
+      font-size: 1.2rem;
+      color: #222;
+    }
+
+    .projet-image {
+      display: block;
+      margin: 20px auto;
+      width: 100%;
+      height: auto;
+      max-width: 400px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .personnes-image {
+      display: block;
+      margin: 20px auto;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .skills, .technologies {
+      margin-top: 40px;
+    }
+
+    .skills ul, .technologies ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .skills ul li, .technologies ul li {
+      color: white;
+      padding: 10px 15px;
+      margin: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      padding: 10px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+
+    /* Media Queries pour la réactivité */
+    @media (max-width: 768px) {
+      header .logo h1 {
+        font-size: 1.8rem;
+      }
+
+      .back-arrow {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      .projet-image, .personnes-image {
+        max-width: 90%;
+      }
+
+      .skills ul li, .technologies ul li {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      nav ul li {
+        margin: 5px 0;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      .projet-image, .personnes-image {
+        max-width: 100%;
+      }
+
+      footer p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html" class="back-arrow">⬅ Accueil</a>
+    </div>
+  </header>
+  
+  <main>
+    <section class="container">
+      <h2>Plongez dans l'univers de Death by IA</h2>
+      <p>Death by IA est un jeu immersif créé en une semaine intense par un groupe de 3 développeurs et 2 designers passionnés. Le concept : vous êtes plongé dans des scénarios où chaque choix compte. Pour survivre, vous devez répondre correctement aux situations proposées, mais attention ! L’intelligence artificielle est là pour réagir à vos décisions, et elle n’a pas l’intention de vous faciliter la tâche. Jusqu’où irez-vous pour échapper à la mort par IA ? 🤖👾</p>
+      <img src="images/image-jeu-1.png" alt="Image projet" class="projet-image">
+    </section>
+    
+    <section class="container skills">
+      <h2>Compétences acquises</h2>
+      <p>J'ai acquis des compétences en création d'interfaces utilisateur, développement en équipe, gestion de projet rapide et conception d'algorithmes, me permettant de concevoir et réaliser des projets efficacement dans un environnement collaboratif.</p>
+      <img src="images/image-personnes.svg" alt="Image projet" class="personnes-image">
+    </section>
+    
+    <section class="container technologies">
+      <h2>Technologies utilisées</h2>
+      <p>Pour ce projet, nous avons utilisés HTML, CSS et JavaScript afin de concevoir une interface utilisateur fluide, responsive et interactive.</p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Death by IA. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

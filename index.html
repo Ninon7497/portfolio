@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ninon ROCHE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" crossorigin="anonymous"></script>
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1 class="press">Ninon ROCHE</h1>
+        <p class="press">Développeuse Web</p>
+        <i class="fas fa-moon theme-toggle" id="themeToggle" onclick="toggleDarkMode()"></i>
+    </header>
+    <section id="about">
+        <div class="a-propos-content">
+            <h2>À PROPOS DE MOI</h2>
+            <p>Je suis Ninon Roche, développeuse web et étudiante en DN Made numérique. Passionnée par le code et la création interactive, j'aime créer des sites esthétiques et fonctionnels.</p>
+            <ul>
+                <h2>COMPETENCES</h2>
+                <img src="images/html-5-logo.svg" alt="LOGO HTML" class="logo-html">
+                <img src="images/css-logo.svg" alt="LOGO CSS" class="logo">
+                <img src="images/js-logo.svg" alt="LOGO JS" class="logo">
+            </ul>
+            <a href="images/CV-Ninon-Roche.pdf" target="_blank" class="btn-cv">VOIR MON CV</a>
+        </div>
+        <img src="images/photo-ninon-2.png" alt="Photo de Ninon Roche" class="profile-picture">
+    </section>
+    <section id="projects">
+        <div class="container">
+            <h2>PROJETS</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>DEATH BY IA</h3>
+                    <p>Death by IA est un jeu immersif où chaque choix compte, vous confrontant à une intelligence artificielle impitoyable prête à réagir à vos décisions pour tester vos limites. 🤖👾</p>
+                    <a href="projet1.html" class="voir-plus">voir plus</a>
+                </div>
+                <div class="project-card">
+                    <h3>SAUVER NOEL</h3>
+                    <p>Trouvez et enfermez le Grinch parmi 64 cases avant que Mariah Carey ne lance sa chanson et ne gâche Noël ! 🎄✨</p>
+                    <a href="projet2.html" class="voir-plus">voir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>CONTACT</h2>
+            <p>Actuellement à la recherche d'une alternance à partir de septembre. N'hésitez pas à me contacter !</p>
+            <div class="social-links">
+                <a href="mailto: Rocheninon74@gmail.com" title="Email"><img src="images/mail.svg" alt="mail" class="logo-contact"></a>
+                <a href="www.linkedin.com/in/ninon-roche-65b540346" target="_blank" title="LinkedIn"><img src="images/linkedin.svg" alt="Linkedin" class="logo-contact"></a>
+                <a href="tel:0768539600"><img src="images/phone.svg" alt="phone" class="logo-contact"></a>
+            </div>
+        </div>
+    </section>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Ninon ROCHE - Développeuse Web</p>
+    </footer>
+    <nav class="menu">
+        <a href="#about"><i class="fas fa-user"></i></a>
+        <a href="#projects"><i class="fas fa-code"></i></a>
+        <a href="#contact"><i class="fas fa-envelope"></i></a>
+    </nav>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            let icon = document.getElementById("themeToggle");
+            if (document.body.classList.contains("dark-mode")) {
+                icon.classList.replace("fa-moon", "fa-sun");
+            } else {
+                icon.classList.replace("fa-sun", "fa-moon");
+            }
+        }
+        const elements = document.querySelectorAll('.fade-in, .slide-in');
+        function handleScroll() {
+            elements.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 50) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    </script>
+</body>
+</html> 

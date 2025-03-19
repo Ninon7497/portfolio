@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sauver Noël</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: white;
+      color: #fff;
+    }
+
+    h1, h2 {
+      color: #ffffff;
+    }
+
+    header {
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .back-arrow {
+        margin-right: auto; /* La pousse à gauche */
+    }
+
+    .back-arrow {
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .back-arrow:hover {
+        color: #00eaff;
+    }
+
+    header .logo h1 {
+      font-size: 2.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00eaff;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #6e8efb;
+      margin-bottom: 20px;
+    }
+
+    .container p {
+      font-size: 1.2rem;
+      color: #222;
+    }
+
+    .projet-image {
+      display: block;
+      margin: 20px auto;
+      width: 50vw;
+      height: 50vw;
+      max-width: 400px;
+      max-height: 400px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    }
+
+.personnes-image {
+  display: block;
+  margin: 20px auto;
+  width: 400px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+    .skills, .technologies {
+      margin-top: 40px;
+    }
+
+    .skills ul, .technologies ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .skills ul li, .technologies ul li {
+      color: white;
+      padding: 10px 15px;
+      margin: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      padding: 10px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="index.html" class="back-arrow">⬅ Accueil</a>
+
+  </header>
+  
+  <main>
+    <section class="container">
+      <h2>Plongez dans l'univers de Sauver Noël</h2>
+      <p>Sauver Noël est un jeu plein de suspense et d’amusement où votre mission est claire : protéger les fêtes ! Sur un plateau de 64 cases, 63 dissimulent Mariah Carey prête à chanter All I Want for Christmas Is You. Mais quelque part, le Grinch se cache, prêt à ruiner Noël. Votre objectif : le trouver et l’enfermer avant qu’il ne soit trop tard. Si vous échouez, Noël sera gâché ! À vous de jouer pour préserver la magie des fêtes ! 🎄✨</p>
+      <img src="images/image-jeu-2.png" alt="Image projet" class="projet-image">
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Death by IA. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
